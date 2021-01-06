@@ -1,9 +1,12 @@
 import * as React from "react";
-import { Pivot, PivotItem, IPivotItemProps, Label, IStyleSet, ILabelStyles,Icon } from '@fluentui/react';
+import { Pivot, PivotItem, IPivotItemProps, Label, IStyleSet, ILabelStyles,Icon,initializeIcons } from '@fluentui/react';
+import MapsComp from './maps';
 
 const labelStyles: Partial<IStyleSet<ILabelStyles>> = {
     root: { marginTop: 10 },
 };
+initializeIcons();
+
 export default class NavBar extends React.Component {
 
 
@@ -12,8 +15,8 @@ export default class NavBar extends React.Component {
         return (
             <div>
                 <Pivot aria-label="Count and Icon Pivot Example">
-                    <PivotItem headerText="My Files" itemCount={42} itemIcon="Emoji2">
-                        <Label styles={labelStyles}>Pivot #1</Label>
+                    <PivotItem headerText="Maps"   itemIcon="Emoji2">
+                        <MapsComp></MapsComp>
                     </PivotItem>
                     <PivotItem itemCount={23} itemIcon="Recent">
                         <Label styles={labelStyles}>Pivot #2</Label>
