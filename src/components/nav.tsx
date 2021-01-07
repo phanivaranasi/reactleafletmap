@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Pivot, PivotItem, IPivotItemProps, Label, IStyleSet, ILabelStyles, Icon, initializeIcons, DefaultButton } from '@fluentui/react';
 import MapsComp from './maps';
+import AllChats from './HighChats/Chats';
+import DynamicChats from './DynamicHighchats/Chats';
 
 import { messageService } from './services';
 
@@ -47,14 +49,29 @@ export default class NavBar extends React.Component<NavBarProps, NavBarState> {
                     <PivotItem headerText="Sidebar" itemIcon="Emoji2">
                         <DefaultButton text="Open Sidebar" onClick={this.showSidebar}></DefaultButton>
                     </PivotItem>
-                    <PivotItem headerText="Placeholder" itemIcon="Globe">
-                        <Label styles={labelStyles}>Pivot #3</Label>
+                   
+                    <PivotItem headerText="Static High Charts" itemIcon="StackedLineChart">
+                        <AllChats></AllChats>
+                        <AllChats></AllChats>
+                        <AllChats></AllChats>
+                        <AllChats></AllChats>
+                        <AllChats></AllChats>
+                        <AllChats></AllChats>
+                        <AllChats></AllChats>
+                        <AllChats></AllChats>
+                        <AllChats></AllChats>
+                        <AllChats></AllChats>                      
+
                     </PivotItem>
-                    <PivotItem headerText="Shared with me" itemIcon="Ringer" itemCount={1}>
-                        <Label styles={labelStyles}>Pivot #4</Label>
-                    </PivotItem>
-                    <PivotItem headerText="Customized Rendering" itemIcon="Globe" itemCount={10} onRenderItemLink={_customRenderer}>
-                        <Label styles={labelStyles}>Customized Rendering</Label>
+                    <PivotItem headerText="Dynamic High Charts" itemIcon="StackedLineChart">
+                        <DynamicChats></DynamicChats>
+                        <DynamicChats></DynamicChats>
+                        <DynamicChats></DynamicChats>
+                        <DynamicChats></DynamicChats>
+                        <DynamicChats></DynamicChats>
+                        <DynamicChats></DynamicChats>
+                        <DynamicChats></DynamicChats>
+                        <DynamicChats></DynamicChats>
                     </PivotItem>
                 </Pivot>
             </div>
