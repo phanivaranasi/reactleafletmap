@@ -14,7 +14,7 @@
       "dom"
     ],
     "allowJs": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "moduleResolution": "node"
   },
   "include": [

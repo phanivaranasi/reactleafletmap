@@ -3,5 +3,8 @@ build
 vscode
 package-lock.json
 ssl
+/src/components/DynamicHighchats
+/src/components/highCharts
+/src/HighChats
 /vscode
 /.vs
